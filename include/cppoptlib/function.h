@@ -2,6 +2,7 @@
 #ifndef INCLUDE_CPPOPTLIB_FUNCTION_H_
 #define INCLUDE_CPPOPTLIB_FUNCTION_H_
 
+#include <cassert>
 #include <optional>
 
 #include "Eigen/Core"

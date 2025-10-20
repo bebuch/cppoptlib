@@ -3,6 +3,7 @@
 #define INCLUDE_CPPOPTLIB_SOLVER_LBFGSB_H_
 
 #include <algorithm>
+#include <cassert>
 #include <limits>
 #include <utility>
 #include <vector>

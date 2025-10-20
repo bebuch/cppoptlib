@@ -49,8 +49,10 @@ install(TARGETS cppoptlib EXPORT cppoptlibTargets)
 
 # Create the cppoptlibConfig.cmake file content
 file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/cppoptlibConfig.cmake"
-    "include(\"\${CMAKE_CURRENT_LIST_DIR}/cppoptlibTargets.cmake\")\n"
-)
+[=[include(CMakeFindDependencyMacro)
+find_dependency(Eigen3)
+include("${CMAKE_CURRENT_LIST_DIR}/cppoptlibTargets.cmake")
+]=])
 
 # Install the header files
 install(DIRECTORY "include/" DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}")
@@ -74,3 +76,4 @@ install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/cppoptlibConfigVersion.cmake"
     DESTINATION "lib/cmake/cppoptlib"
 )
+
